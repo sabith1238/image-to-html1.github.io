@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Mukta Mahee', sans-serif;
+
+        }
+
+
+        .header {
+            height: 95px;
+            background-color: #1B1F1E;
+            padding: 10px 15px;
+            border-bottom: 8px solid #BAC96C;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            background-color: skyblue;
+        }
+
+        .logo {
+            width: 20%;
+            float: left;
+            padding-top: 0px;
+        }
+
+        .logo h1 {
+            font-weight: normal;
+            font-size: 40px;
+            color: white;
+        }
+
+        .logo p {
+            font-weight: normal;
+            font-size: 17px;
+            padding-left: 18px;
+            color: white;
+        }
+
+        .navbar {
+            width: 70%;
+            float: right;
+            border: 1px solid #3F3F3F;
+            margin-top: 0px auto;
+            border-radius: 25px;
+
+        }
+
+        .navbar ul {
+            list-style: none;
+        }
+
+        .navbar ul li {
+            float: left;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 20px;
+            color: white;
+            display: block;
+            margin-top: 5px;
+            padding: 1px 45px;
+            transition: 1s;
+            border-right: 1px solid #3F3F3F;
+        }
+
+        .navbar ul li a:hover {
+            color: #BAC96C;
+        }
+
+        .navbar ul li:last-child a {
+            border-right: none;
+        }
+
+
+        .bg-image {
+            overflow: hidden;
+            padding: 40px 30px;
+            background: linear-gradient(#a8a8a8, #444444 50%);
+            color: #fff;
+        }
+
+        .bg-image .image {
+            border: 8px solid #868485;
+            overflow: hidden;
+        }
+
+        .bg-image .image img {
+            transition: 1.5s;
+            width: 100%;
+
+        }
+
+        .bg-image .image:hover img {
+            transform: scale(1.2);
+        }
+
+        .bg-image .text {
+            margin-top: 35px;
+        }
+
+        .bg-image .text h1 {
+            font-weight: 600;
+        }
+
+        .bg-image .text p {
+            color: #c3c2c2;
+            padding-right: 20px;
+            margin: 20px 0;
+            line-height: 27px;
+        }
+
+        .bg-image .text .bg-btn {
+            background: #D9EA7A;
+            border: none;
+            font-weight: 600;
+            padding: 10px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+
+        /* content section */
+
+        .content {
+            padding: 40px 30px;
+            overflow: hidden;
+        }
+
+        .content h1 {
+            font-weight: 600;
+            color: #3e3c3c;
+        }
+
+        .content .lines {
+            position: relative;
+            height: 0px;
+            background: #f5f5f5;
+            display: block;
+        }
+
+        .content .lines:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 23%;
+            height: 100%;
+            border: 2px solid #D4DEA1;
+        }
+
+        .content .left h5 {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        .content .left ul li {
+            margin: 20px 0;
+            line-height: 27px;
+            color: #757474;
+        }
+
+        .content .left p {
+            line-height: 27px;
+            color: #757474;
+        }
+
+        .content .left .border {
+            border: none !important;
+            border-left: 5px solid #BBD043 !important;
+            padding-left: 40px;
+        }
+
+
+        .content .right .news {
+            background: #3D3D3D;
+            color: #fff;
+            padding: 10px 30px;
+            margin-bottom: 20px;
+        }
+
+        .content .right .box {
+            background: #EEEEEE;
+            overflow: hidden;
+            display: flex;
+            min-height: 150px;
+            padding: 10px;
+            border-bottom: 5px solid #ccc;
+        }
+
+        .content .right .img {
+            width: 50%;
+        }
+
+        .content .right .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content .right .text {
+            margin-left: 15px;
+        }
+
+        .content .right .text .date {
+            color: #8d8d8d;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+
+        .content .right .text h5 {
+            font-weight: 600;
+        }
+
+        .content .right .text p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #958c8c;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1>Simple</h1>
+                <p>Your tagline goes here</p>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Company</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-image">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image">
+                        <!-- image -->
+                        <img src="https://images.pexels.com/photos/889110/pexels-photo-889110.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="image not found">
+                    </div>
+                    <!-- end image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="text">
+                        <!-- text -->
+                        <h1>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere asperiores magnam aspernatur delectus iusto qui perspiciatis neque quasi? Ipsa, atque, voluptatem vero reiciendis odit ut voluptatibus suscipit perspiciatis sint saepe quaerat, quas neque at voluptate officia nisi tenetur. Magni.
+                        </p>
+                        <button class="bg-btn">Read More</button>
+                    </div>
+                    <!-- end text -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-4">
+                    <div class="left">
+                        <!-- left -->
+                        <h1>Welcome to our WEBSITE!</h1>
+                        <hr class="lines">
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quo obcaecati harum laboriosam, quam eum, vero molestias fugiat assumenda voluptatibus accusantium! Alias, doloribus. Inventore, a.</h5><br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus cumque, excepturi autem mollitia quis labore quisquam soluta in hic omnis, blanditiis voluptatum ab reiciendis obcaecati nostrum consequuntur unde harum facilis rerum aut!</p>
+
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ducimus esse modi ut architecto! Harum iste ipsa odio deserunt totam?</li>
+
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusamus illo id vero fugit ea voluptatum dolorum voluptates, non minus sint atque officia totam debitis corporis perferendis ratione fuga.</li>
+                        </ul>
+                        <p class="border">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam officia asperiores omnis quaerat ratione consequatur, sit vero blanditiis consequuntur non nam eveniet repellendus nobis sunt neque, expedita dolorem qui dignissimos. Sapiente, delectus. Nisi, dicta, optio!</p>
+                    </div>
+                    <!-- end left -->
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="right">
+                        <!-- right -->
+                        <div class="news">
+                            <h4>Latest News</h4>
+                        </div>
+                        <div class="box">
+                            <!-- box -->
+                            <div class="img">
+                                <img src="https://images.pexels.com/photos/889110/pexels-photo-889110.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="image not found">
+                            </div>
+                            <div class="text">
+                                <p class="date">OCT/19/2018</p>
+                                <h5>Lorem ipsum dolor sit.</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quo libero, distinctio aliquid.</p>
+                            </div>
+                        </div>
+                        <!-- end box -->
+                        <div class="box" style="background: #DEDEDE; border: none;">
+                            <!-- box -->
+                            <div class="img">
+                                <img src="https://images.pexels.com/photos/889110/pexels-photo-889110.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="image not found">
+                            </div>
+                            <div class="text">
+                                <p class="date">OCT/19/2018</p>
+                                <h5>Lorem ipsum dolor sit.</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quo libero, distinctio aliquid.</p>
+                            </div>
+                        </div>
+                        <!-- end box -->
+                        <div class="box">
+                            <!-- box -->
+                            <div class="img">
+                                <img src="https://images.pexels.com/photos/889110/pexels-photo-889110.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="image not found">
+                            </div>
+                            <div class="text">
+                                <p class="date">OCT/19/2018</p>
+                                <h5>Lorem ipsum dolor sit.</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quo libero, distinctio aliquid.</p>
+                            </div>
+                        </div>
+                        <!-- end box -->
+                    </div>
+                    <!-- end right -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content section -->
+</body>
+
+
+</html>
